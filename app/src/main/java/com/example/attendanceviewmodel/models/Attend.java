@@ -1,7 +1,7 @@
 package com.example.attendanceviewmodel.models;
 
 public class Attend {
-    String name, nim, classes;
+    private String name, nim, classes;
 
     public Attend(){
 

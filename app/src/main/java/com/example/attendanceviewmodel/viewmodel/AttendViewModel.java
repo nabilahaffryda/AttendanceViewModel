@@ -16,11 +16,18 @@ public class AttendViewModel extends ViewModel {
     public MutableLiveData<Attend> attendMutableLiveData = new MutableLiveData<>();
     public Attend atd = new Attend();
 
-    public void onClicked(){
+    public void AddonClicked() {
         atd = new Attend(name.getValue(), nim.getValue(), classes.getValue());
         attendMutableLiveData.setValue(atd);
         Log.d("Add Student Name : ", String.valueOf(atd.getName()));
         Log.d("Add Student NIM : ", String.valueOf(atd.getNim()));
         Log.d("Add Student Class : ", String.valueOf(atd.getClasses()));
+    }
+    public void resetOnClicked(){
+        atd = new Attend();
+        attendMutableLiveData.setValue(atd);
+        Log.d("Score has reset, Name: ", String.valueOf(atd.getName()));
+        Log.d("NIM: ", String.valueOf(atd.getNim()));
+        Log.d("Class: ", String.valueOf(atd.getClasses()));
     }
 }
